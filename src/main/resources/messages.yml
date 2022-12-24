@@ -1,0 +1,23 @@
+#
+# You can use HEX-Code and Minecraft Chat Color.
+# {SENDER} -> Gets replaced with the name of the command sender (Can be left out)
+# {TARGET} -> Gets replaced with the name of the receiving player (Can be left out)
+# {OWNER} -> Gets replaced with the name of the skull owner (Can be left out)
+#
+PREFIX: "#4ECCA3&lCS #232931→ #EEEEEE"
+CONSOLE_NAME: "Console"
+
+MESSAGE_FILE_RELOADED: "&7The &amessages.yml &7was reloaded."
+
+NOT_ENOUGH_PERMISSIONS: "#CA3E47You aren't allowed to do that."
+REQUIRES_PLAYER: "#FFD369This command is only for players."
+COMMAND_USAGE: "&eInvalid usage. Please use: /playerskull <player> (target)"
+
+TARGET_NOT_ONLINE: "#FFD369{TARGET} seems to be offline."
+
+PLAYER_HEAD_CREATED: "You have created the head of #FFD369{OWNER}#EEEEEE."
+
+PLAYER_HEAD_SENT: "#37AA9C{TARGET} #EEEEEEreceived the head of #FFD369{OWNER}#EEEEEE."
+PLAYER_HEAD_RECEIVED: "#37AA9C{SENDER} #EEEEEEgave you the head of #FFD369{OWNER}#EEEEEE."
+
+PLAYER_HEAD_DISPLAYNAME: "#37AA9C&l{OWNER}"

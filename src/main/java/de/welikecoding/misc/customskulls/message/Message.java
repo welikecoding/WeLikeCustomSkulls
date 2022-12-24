@@ -1,0 +1,23 @@
+package de.welikecoding.misc.customskulls.message;
+
+public enum Message {
+
+    PREFIX,
+    CONSOLE_NAME,
+
+    MESSAGE_FILE_RELOADED,
+
+    NOT_ENOUGH_PERMISSIONS,
+    REQUIRES_PLAYER,
+    COMMAND_USAGE,
+
+    TARGET_NOT_ONLINE,
+
+    PLAYER_HEAD_CREATED,
+
+    PLAYER_HEAD_SENT,
+    PLAYER_HEAD_RECEIVED,
+
+    PLAYER_HEAD_DISPLAYNAME
+
+}
