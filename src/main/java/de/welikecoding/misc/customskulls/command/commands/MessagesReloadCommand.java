@@ -13,7 +13,7 @@ public class MessagesReloadCommand extends Command {
                 new String[]{"csr:messages", "csr:msg"},
                 "Reload the messages file.",
                 "/csreload:messages",
-                "customskulls.reload",
+                "customskulls.reload.messages",
                 false
         );
     }
