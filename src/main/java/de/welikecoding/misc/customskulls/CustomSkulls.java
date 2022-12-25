@@ -6,6 +6,7 @@ import de.welikecoding.misc.customskulls.command.commands.MessagesReloadCommand;
 import de.welikecoding.misc.customskulls.command.commands.PlayerSkullCommand;
 import de.welikecoding.misc.customskulls.customs.CustomSkullFileManager;
 import de.welikecoding.misc.customskulls.message.MessageFileManager;
+import de.welikecoding.misc.customskulls.utils.VersionChecker;
 import lombok.Getter;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,6 +25,7 @@ public final class CustomSkulls extends JavaPlugin {
         customSkullFileManager = new CustomSkullFileManager(this);
     }
 
+
     @Override
     public void onEnable() {
 
@@ -35,6 +37,8 @@ public final class CustomSkulls extends JavaPlugin {
         new CustomSkullReloadCommand();
 
         Metrics metrics = new Metrics(this, 17176);
+
+        new VersionChecker().checkForUpdate();
 
     }
 
