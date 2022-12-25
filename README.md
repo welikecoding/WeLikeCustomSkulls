@@ -19,7 +19,7 @@ If you have found an bug or have an feature idea create an issue with the right 
 - /playerskull owner (target)
 - /customskull key (target)
 - /reload:messages
-- /reloag:customskulls
+- /reload:customskulls
 
 ## Roadmap
 
