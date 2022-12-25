@@ -19,4 +19,4 @@ If you have found an bug or have an feature idea create an issue with the right 
 
 ## Roadmap
 
-- Get custom skulls by value and signature instead of just players
+- Get custom skulls by value instead of just players
