@@ -1,0 +1,8 @@
+#
+# You can add as many skulls as you would like to.
+# The Skull Key (ExampleSkull) has to be unique for each skull.
+# You can get values at https://freshcoal.com/ for example.
+#
+Skulls:
+  ExampleSkull:
+    Value: "Value"

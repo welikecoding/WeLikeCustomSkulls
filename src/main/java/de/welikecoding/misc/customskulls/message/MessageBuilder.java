@@ -2,7 +2,6 @@ package de.welikecoding.misc.customskulls.message;
 
 import de.welikecoding.misc.customskulls.CustomSkulls;
 import de.welikecoding.misc.customskulls.utils.CC;
-import org.bukkit.OfflinePlayer;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
@@ -24,18 +23,8 @@ public class MessageBuilder {
         return this;
     }
 
-    public MessageBuilder withTarget(Player target) {
-        messageString = messageString.replace("{TARGET}", target.getName());
-        return this;
-    }
-
-    public MessageBuilder withTarget(String targetsName) {
-        messageString = messageString.replace("{TARGET}", targetsName);
-        return this;
-    }
-
-    public MessageBuilder withOwner(OfflinePlayer owner) {
-        messageString = messageString.replace("{OWNER}", owner.getName());
+    public MessageBuilder with(String target, String replacement) {
+        messageString = messageString.replace(target, replacement);
         return this;
     }
 

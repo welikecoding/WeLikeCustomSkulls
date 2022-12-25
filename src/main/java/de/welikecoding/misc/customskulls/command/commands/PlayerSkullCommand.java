@@ -11,6 +11,10 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.SkullMeta;
+import org.bukkit.util.StringUtil;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PlayerSkullCommand extends Command {
 
@@ -29,7 +33,7 @@ public class PlayerSkullCommand extends Command {
     public void execute(CommandSender sender, String[] args) {
 
         if(args.length == 0 || args.length > 2) {
-            new MessageBuilder(Message.COMMAND_USAGE).send(sender);
+            new MessageBuilder(Message.PS_COMMAND_USAGE).send(sender);
             return;
         }
 
@@ -43,7 +47,7 @@ public class PlayerSkullCommand extends Command {
         SkullMeta playerSkullMeta = (SkullMeta) playerSkull.getItemMeta();
         if (playerSkullMeta != null) {
             playerSkullMeta.setOwningPlayer(owner);
-            playerSkullMeta.setDisplayName(new MessageBuilder(Message.PLAYER_HEAD_DISPLAYNAME).withOwner(owner).buildWithoutPrefix());
+            playerSkullMeta.setDisplayName(new MessageBuilder(Message.PS_DISPLAYNAME).with("{OWNER}", owner.getName()).buildWithoutPrefix());
         }
         playerSkull.setItemMeta(playerSkullMeta);
 
@@ -54,21 +58,33 @@ public class PlayerSkullCommand extends Command {
             Player player = (Player) sender;
 
             player.getInventory().addItem(playerSkull);
-            new MessageBuilder(Message.PLAYER_HEAD_CREATED).withOwner(owner).send(sender);
+            new MessageBuilder(Message.PS_CREATED).with("{OWNER}", owner.getName()).send(sender);
 
         } else {
 
             Player target = Bukkit.getPlayerExact(args[1]);
             if(target == null || !target.isOnline()) {
-                new MessageBuilder(Message.TARGET_NOT_ONLINE).withTarget(args[1]).send(sender);
+                new MessageBuilder(Message.TARGET_NOT_ONLINE).with("{TARGET}", args[1]).send(sender);
                 return;
             }
 
             target.getInventory().addItem(playerSkull);
-            new MessageBuilder(Message.PLAYER_HEAD_SENT).withTarget(target).withOwner(owner).send(sender);
-            new MessageBuilder(Message.PLAYER_HEAD_RECEIVED).withSender(sender).withOwner(owner).send(target);
+            new MessageBuilder(Message.PS_SENT).with("{TARGET}", target.getName()).with("{OWNER}", owner.getName()).send(sender);
+            new MessageBuilder(Message.PS_RECEIVED).withSender(sender).with("{OWNER}", owner.getName()).send(target);
 
         }
 
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender sender, String[] args) {
+
+        if(args.length == 2) {
+            List<String> onlinePlayers = new ArrayList<>();
+            Bukkit.getOnlinePlayers().forEach(player -> onlinePlayers.add(player.getName()));
+            return StringUtil.copyPartialMatches(args[1], onlinePlayers, new ArrayList<>());
+        }
+
+        return new ArrayList<>();
     }
 }

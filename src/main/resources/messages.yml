@@ -1,23 +1,42 @@
 #
-# You can use HEX-Code and Minecraft Chat Color.
-# {SENDER} -> Gets replaced with the name of the command sender (Can be left out)
-# {TARGET} -> Gets replaced with the name of the receiving player (Can be left out)
-# {OWNER} -> Gets replaced with the name of the skull owner (Can be left out)
+# => You can use HEX-Code and Minecraft Chat Color.
+# {SENDER} -> Gets replaced with the name of the command sender
+# {TARGET} -> Gets replaced with the name of the receiving player
+# {OWNER} -> Gets replaced with the name of the skull owner
+# {SKULLKEY} -> Gets replaced with the name of the skull key
 #
+# => You can leave those completely out / remove them if you don't want to use them.
+# => they will only work in the messages they are in right now.
+#
+
+# GENERAL
 PREFIX: "#4ECCA3&lCS #232931→ #EEEEEE"
 CONSOLE_NAME: "Console"
 
-MESSAGE_FILE_RELOADED: "&7The &amessages.yml &7was reloaded."
-
 NOT_ENOUGH_PERMISSIONS: "#CA3E47You aren't allowed to do that."
 REQUIRES_PLAYER: "#FFD369This command is only for players."
-COMMAND_USAGE: "&eInvalid usage. Please use: /playerskull <player> (target)"
-
 TARGET_NOT_ONLINE: "#FFD369{TARGET} seems to be offline."
 
-PLAYER_HEAD_CREATED: "You have created the head of #FFD369{OWNER}#EEEEEE."
+MESSAGE_FILE_RELOADED: "&7The &amessages.yml &7was reloaded."
+CUSTOM_SKULLS_FILE_RELOADED: "&7The &acustomskulls.yml &7was reloaded."
 
-PLAYER_HEAD_SENT: "#37AA9C{TARGET} #EEEEEEreceived the head of #FFD369{OWNER}#EEEEEE."
-PLAYER_HEAD_RECEIVED: "#37AA9C{SENDER} #EEEEEEgave you the head of #FFD369{OWNER}#EEEEEE."
+# PLAYERSKULL
+PS_COMMAND_USAGE: "#FFD369Invalid usage. Please use: /playerskull <player> (target)"
 
-PLAYER_HEAD_DISPLAYNAME: "#37AA9C&l{OWNER}"
+PS_CREATED: "You have created the head of #FFD369{OWNER}#EEEEEE."
+PS_SENT: "#37AA9C{TARGET} #EEEEEEreceived the head of #FFD369{OWNER}#EEEEEE."
+PS_RECEIVED: "#37AA9C{SENDER} #EEEEEEgave you the head of #FFD369{OWNER}#EEEEEE."
+
+PS_DISPLAYNAME: "#37AA9C&l{OWNER}"
+
+# CUSTOMSKULL
+CS_COMMAND_USAGE: "#FFD369Invalid usage. Please use: /customskull <key> (target)"
+
+CS_CREATED: "You have created the custom skull with key #FFD369{SKULLKEY}#EEEEEE."
+CS_SENT: "#37AA9C{TARGET} #EEEEEEreceived the custom skull with key #FFD369{SKULLKEY}#EEEEEE."
+CS_RECEIVED: "#37AA9C{SENDER} #EEEEEEgave you the custom skull with key #FFD369{SKULLKEY}#EEEEEE."
+
+CS_DISPLAYNAME: "#37AA9C&l{SKULLKEY}"
+
+CS_MISSING_TEXTURE_DISPLAYNAME: "&5&lMISSING TEXTURE" # {SKULLKEY} usable
+CS_MISSING_TEXTURE_LORE: "&7Key: &c{SKULLKEY}"
