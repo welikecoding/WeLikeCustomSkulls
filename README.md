@@ -10,13 +10,17 @@ If you have found an bug or have an feature idea create an issue with the right 
 ![PERMISSIONS](https://github.com/welikecoding/CustomSkulls/blob/master/permissions.png?raw=true)
 
 - customskulls.ps.use
+- customskulls.cs.use
 - customskulls.reload.messages
+- customskulls.reload.customskulls
 
 ![COMMANDS](https://github.com/welikecoding/CustomSkulls/blob/master/commands.png?raw=true)
 
 - /playerskull owner (target)
+- /customskull key (target)
 - /reload:messages
+- /reloag:customskulls
 
 ## Roadmap
 
-- Get custom skulls by value instead of just players
+- Add and remove custom skulls ingame
