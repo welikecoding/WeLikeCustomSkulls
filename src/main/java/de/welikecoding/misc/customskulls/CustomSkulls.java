@@ -7,6 +7,7 @@ import de.welikecoding.misc.customskulls.command.commands.PlayerSkullCommand;
 import de.welikecoding.misc.customskulls.customs.CustomSkullFileManager;
 import de.welikecoding.misc.customskulls.message.MessageFileManager;
 import lombok.Getter;
+import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class CustomSkulls extends JavaPlugin {
@@ -32,6 +33,8 @@ public final class CustomSkulls extends JavaPlugin {
         new MessagesReloadCommand();
         new CustomSkullCommand();
         new CustomSkullReloadCommand();
+
+        Metrics metrics = new Metrics(this, 17176);
 
     }
 

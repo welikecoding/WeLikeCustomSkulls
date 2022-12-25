@@ -1,4 +1,4 @@
-name: CustomSkulls
+name: WeLikeCustomSkulls
 version: '${project.version}'
 main: de.welikecoding.misc.customskulls.CustomSkulls
 api-version: 1.16
