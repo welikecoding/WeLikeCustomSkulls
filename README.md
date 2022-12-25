@@ -14,7 +14,7 @@ If you have found an bug or have an feature idea create an issue with the right 
 
 ![COMMANDS](https://github.com/welikecoding/CustomSkulls/blob/master/commands.png?raw=true)
 
-- /playerskull <owner> (target)
+- /playerskull owner (target)
 - /reload:messages
 
 ## Roadmap
