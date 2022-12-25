@@ -15,7 +15,7 @@ description:
       Alle Nachrichten sind änderbar und es werden sowohl Hex-Codes als auch die Chat Color von Minecraft unterstützt.
 
       # Nutzung
-      Mit dem Befehl /playerskull <owner> (target) kannst du die Köpfe erhalten.
+      Mit dem Befehl /playerskull (owner) (target) kannst du die Köpfe erhalten.
       
       Owner -> Der Spieler dessen Kopf du haben möchtest.
       Target -> Eine optionale Angabe, falls du jemand anderen einen Kopf geben möchtest.
@@ -30,7 +30,7 @@ description:
       All messages are changeable and both hex codes and Minecraft's chat color are supported.
 
       # Usage
-      With the command /playerskull <owner> (target) you can get the heads.
+      With the command /playerskull (owner) (target) you can get the heads.
       
       Owner -> The player whose head you want to have.
       Target -> An optional specification if you want to give someone else a head.
