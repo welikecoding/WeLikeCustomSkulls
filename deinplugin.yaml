@@ -6,8 +6,8 @@ authors:
 supportedGameVersions: ^1.16
 category: misc
 introduction:
-  de: Schnell und einfach jeden Spielerkopf erhalten, den du möchtest.
-  en: Quickly and easily get any player head you want.
+  de: Schnell und einfach jeden Spielerkopf / Custom head erhalten, den du möchtest.
+  en: Quickly and easily get any player / custom head you want.
 description:
   de: |
       # Überblick
@@ -15,7 +15,8 @@ description:
       Alle Nachrichten sind änderbar und es werden sowohl Hex-Codes als auch die Chat Color von Minecraft unterstützt.
 
       # Nutzung
-      Mit dem Befehl /playerskull (owner) (target) kannst du die Köpfe erhalten.
+      Mit dem Befehl /playerskull owner (target) kannst du den Kopf von owner erhalten.
+      Mit dem Befehl /customskull key (target) kannst du den Kopf erhalten, den du unter diesem key in der Datei hinterlegt hast.
       
       Owner -> Der Spieler dessen Kopf du haben möchtest.
       Target -> Eine optionale Angabe, falls du jemand anderen einen Kopf geben möchtest.
@@ -23,14 +24,15 @@ description:
       Auch die Konsole kann anderen Spielern Köpfe geben.
       
       # Roadmap
-      Weitere Features wie das erstellen von eigenen Köpfen mit value sind geplant.
+      Weitere Features wie das hinzufügen und entfernen von Köpfen ingame.
   en: |
       # Overview
       Through CustomSkulls you have the possibility to get any player head super fast and uncomplicated.
       All messages are changeable and both hex codes and Minecraft's chat color are supported.
 
       # Usage
-      With the command /playerskull (owner) (target) you can get the heads.
+      With the command /playerskull owner (target) you can the head of owner.
+      With the commands /customskull key (target) you can get the head you defined for this key inside your file.
       
       Owner -> The player whose head you want to have.
       Target -> An optional specification if you want to give someone else a head.
@@ -38,7 +40,7 @@ description:
       The console can also give heads to other players.
       
       # Roadmap
-      More features like creating heads with value are planned.
+      More features like added or removing heads ingame.
 tags:
   - misc
   - skulls
